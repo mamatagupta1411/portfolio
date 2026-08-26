@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mamata Gupta — Resume</title>
+  <style>
+    :root {
+      --accent: #6c63ff;
+      --ink: #1a1a2e;
+      --muted: #555;
+      --line: #d8d8e4;
+      --bg-soft: #f4f4fb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: #e9e9f2;
+      line-height: 1.5;
+      font-size: 13px;
+      padding: 24px;
+    }
+
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto 16px;
+      text-align: right;
+    }
+
+    .toolbar button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .toolbar button:hover { background: #5a52e0; }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 44px 52px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      letter-spacing: 0.5px;
+      color: var(--ink);
+    }
+
+    header .role {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+
+    .contact {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .contact a { color: var(--muted); text-decoration: none; }
+    .contact span { display: inline-flex; align-items: center; gap: 5px; }
+    .contact b { color: var(--accent); }
+
+    /* ===== SECTIONS ===== */
+    section { margin-bottom: 20px; }
+
+    h2.sec {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    p.summary { font-size: 12.5px; color: #333; text-align: justify; }
+
+    /* ===== EXPERIENCE ===== */
+    .job { margin-bottom: 16px; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .job-head h3 { font-size: 14px; }
+    .job-head .date {
+      font-size: 11.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .company { font-size: 12.5px; color: var(--accent); font-weight: 600; margin-bottom: 2px; }
+    .project { font-size: 12px; font-style: italic; color: #444; margin-bottom: 6px; }
+
+    ul.bullets { margin: 0 0 0 18px; }
+    ul.bullets li { font-size: 12px; color: #333; margin-bottom: 3px; }
+
+    .tech {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .tech b { color: var(--ink); }
+
+    /* ===== TWO-COLUMN GRID ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 28px;
+    }
+
+    /* ===== SKILLS ===== */
+    .skill-row { margin-bottom: 7px; font-size: 12px; }
+    .skill-row b { color: var(--ink); display: inline-block; min-width: 118px; }
+
+    /* ===== EDUCATION / LISTS ===== */
+    .edu-item { margin-bottom: 9px; }
+    .edu-item h4 { font-size: 12.5px; }
+    .edu-item .meta { font-size: 11.5px; color: var(--muted); }
+    .edu-item .score { font-weight: 600; color: var(--accent); }
+
+    ul.plain { margin: 0 0 0 16px; }
+    ul.plain li { font-size: 12px; color: #333; margin-bottom: 4px; }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body { background: #fff; padding: 0; font-size: 11.5px; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; max-width: 100%; padding: 0; }
+      @page { size: A4; margin: 14mm; }
+      section { page-break-inside: avoid; }
+      .job { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button onclick="window.print()">⬇ Download / Print PDF</button>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <h1>Mamata Gupta</h1>
+      <div class="role">Software Developer</div>
+      <div class="contact">
+        <span>✉ <a href="mailto:mamata.gupta9919@gmail.com">mamata.gupta9919@gmail.com</a></span>
+        <span>✆ +91 70397 48452</span>
+        <span>📍 Mumbai, Maharashtra</span>
+        <span>in <a href="https://www.linkedin.com/in/mamata-gupta-8b503b185" target="_blank">mamata-gupta-8b503b185</a></span>
+        <span>⌨ <a href="https://github.com/mamatagupta1411" target="_blank">github.com/mamatagupta1411</a></span>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section>
+      <h2 class="sec">Professional Summary</h2>
+      <p class="summary">
+        Software Developer with <b>3.5+ years</b> of experience delivering enterprise-grade applications in
+        large-scale environments. Strong expertise in Java, JDBC, Spring Boot, Angular, SQL and RESTful APIs across the
+        full software development lifecycle. Proven ability to debug complex issues, optimize system performance
+        (including batch-based multithreading), and implement scalable backend solutions. Experienced in cloud-based
+        migrations and cross-technology transformations spanning Java, Python and GCP/AWS. A proactive team player with
+        strong analytical and problem-solving skills, committed to continuous learning and driving impactful business outcomes.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2 class="sec">Work Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Software Developer</h3>
+          <span class="date">Feb 2026 – Present</span>
+        </div>
+        <div class="company">Kanthamai Tech Private Limited</div>
+        <div class="project">Project: KYRO — AI-Powered Semantic Code Search</div>
+        <ul class="bullets">
+          <li>Developing the backend for the KYRO solution using Python &amp; FastAPI to search codebases across GitHub repositories.</li>
+          <li>Implemented a feature enabling users to enter a GitHub repository URL and search through that repo's code.</li>
+          <li>Building new product features including an <b>agentic search</b> option, document support for searching, and advanced filter options to refine search results.</li>
+          <li>Created and configured an AWS EC2 instance and deployed the application on it.</li>
+          <li><b>Mentoring junior developers</b>, guiding them through requirements, code reviews, and best practices.</li>
+          <li>Collaborating with team members to understand requirements and resolve issues.</li>
+        </ul>
+        <div class="tech"><b>Tech:</b> Python, FastAPI, Qdrant, Neo4j, SQL, HTML, CSS, JavaScript, Git, AWS, Docker, Microservices</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>System Engineer</h3>
+          <span class="date">Oct 2022 – Jan 2026</span>
+        </div>
+        <div class="company">Tata Consultancy Services Ltd.</div>
+        <div class="project">Project: TCSiON ERP Product — Finance &amp; Accounting Solution</div>
+        <ul class="bullets">
+          <li>Developed and tested Java code for the TCSiON ERP server-side application, ensuring compliance with client specifications and deadlines; maintained versioning with SVN.</li>
+          <li>Debugged code and analyzed server logs to identify and fix issues; implemented batch-based multithreading that improved system performance by <b>80%</b>.</li>
+          <li>Built and enhanced Angular screens for migration, achieving <b>100% functional parity</b> between old and new screens through proper validations and clean code.</li>
+          <li>Created and modified REST APIs (tested via Postman) and performed data fixes using SQL queries.</li>
+          <li>Introduced a Flag Utility to enable/disable screens as needed; worked effectively both independently and within cross-functional teams.</li>
+        </ul>
+        <div class="tech"><b>Tech:</b> Java 1.8, Angular 16, MySQL 5.7, REST APIs, JDBC, Servlets, JSP, JavaScript, HTML, CSS, JSON, XML, JBOSS, Microservices</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>System Engineer</h3>
+          <span class="date">Tata Consultancy Services Ltd.</span>
+        </div>
+        <div class="project">Project: Equifax — Banking: SAS to Python Migration</div>
+        <ul class="bullets">
+          <li>Developed Python modules per customer requirements within the GCP cloud environment.</li>
+          <li>Analyzed legacy SAS code to plan and drive the migration to Python.</li>
+          <li>Connected directly with customers to understand and resolve their issues; updated code and maintained versioning on GitHub.</li>
+          <li>Optimized SQL queries for better performance.</li>
+          <li>Integrated Python modules with GCP to automatically deploy to the target instance.</li>
+        </ul>
+        <div class="tech"><b>Tech:</b> Python 3.8, GCP Cloud, SAS, SQL, Pandas, NumPy, XLSXWriter, Equifax FusionG, Excel</div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2 class="sec">Technical Skills</h2>
+      <div class="skill-row"><b>Java &amp; Backend</b> Java (Core + Advanced), OOP, Spring Boot, Hibernate, JDBC, Servlets, JSP, REST APIs, Microservices</div>
+      <div class="skill-row"><b>Python</b> Python, FastAPI, Pandas, NumPy, XLSXWriter</div>
+      <div class="skill-row"><b>AI / GenAI</b> Agentic AI, Semantic Search, Qdrant (Vector DB), Neo4j (Graph DB)</div>
+      <div class="skill-row"><b>Frontend</b> Angular, HTML5, CSS3, JavaScript, JSON, XML</div>
+      <div class="skill-row"><b>Database</b> MySQL, PostgreSQL, SQL Server, SQL, Qdrant, Neo4j</div>
+      <div class="skill-row"><b>Cloud &amp; DevOps</b> AWS (EC2), GCP, Docker, Git / GitHub, SVN</div>
+      <div class="skill-row"><b>Tools</b> Eclipse, IntelliJ, PyCharm, VS Code, Postman, MySQL Workbench, Jira, SonarQube, DevPlus</div>
+      <div class="skill-row"><b>CS Fundamentals</b> Data Structures, Algorithms, Debugging, Performance Optimization</div>
+      <div class="skill-row"><b>Soft Skills</b> Quick Learner, Adaptability, Team Player, Effective Communication, Problem Solving, Analytical Thinking</div>
+    </section>
+
+    <div class="grid2">
+      <!-- EDUCATION -->
+      <section>
+        <h2 class="sec">Education</h2>
+        <div class="edu-item">
+          <h4>B.E. — Electronics &amp; Telecommunication</h4>
+          <div class="meta">Dr. D.Y. Patil's Ramrao Adik Institute of Technology · 2019 – 2022</div>
+          <div class="meta"><span class="score">CGPA: 8.84 / 10</span></div>
+        </div>
+        <div class="edu-item">
+          <h4>Diploma — Industrial Electronics</h4>
+          <div class="meta">K J Somaiya Polytechnic · 2015 – 2018</div>
+          <div class="meta"><span class="score">Percentage: 86.5%</span></div>
+        </div>
+        <div class="edu-item">
+          <h4>SSC</h4>
+          <div class="meta">R.K. Hindi High School</div>
+          <div class="meta"><span class="score">Percentage: 89.80%</span></div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section>
+        <h2 class="sec">Certifications</h2>
+        <ul class="plain">
+          <li>Programming in Java — NIIT</li>
+          <li>Web Application using Servlet &amp; JSP (Level 1) — NIIT</li>
+          <li>Spring Boot Crash Course — Udemy</li>
+        </ul>
+        <h2 class="sec" style="margin-top:16px;">Languages</h2>
+        <ul class="plain">
+          <li>English, Hindi, Marathi</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ACCOMPLISHMENTS -->
+    <section>
+      <h2 class="sec">Accomplishments</h2>
+      <ul class="plain">
+        <li><b>Special Initiative Award</b> — for extending effort to meet a timely delivery milestone.</li>
+        <li><b>Star Team Award</b> — for outstanding collaboration and delivering high-quality, complex solutions to tier-1 customers.</li>
+        <li><b>Elevate Wings (Learning) Award</b> — for continuous upskilling.</li>
+        <li><b>On the Spot (Team) Award</b> — for building a business model presented during client visits.</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
